@@ -1,10 +1,10 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import styles from './page.module.css'
 
-export default function About() {
+export default function Contacts() {
   return (
     <>
-      <Header />
       <main className="p-8 max-w-4xl mx-auto">
         <div className="min-h-screen flex flex-col items-center justify-center p-8">
           <h1 className="text-3xl font-bold mb-6 text-center">Contato</h1>
@@ -30,7 +30,6 @@ export default function About() {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   );
 }
