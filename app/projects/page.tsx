@@ -1,6 +1,7 @@
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import ProjectCard from '../components/ProjectCard'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
+import ProjectCard from '../../components/ProjectCard'
+import styles from './page.module.css'
 
 export default function Projets() {
   const projetos = [
@@ -11,7 +12,6 @@ export default function Projets() {
 
   return (
     <>
-      <Header />
       <main className="p-8 max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold mb-4">Projetos</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -20,7 +20,6 @@ export default function Projets() {
           ))}
         </div>
       </main>
-      <Footer />
     </>
   )
 }
