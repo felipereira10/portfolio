@@ -1,0 +1,97 @@
+[00:00:03.741] Server  LOG      ✓ Ready in 2.9s
+[00:00:12.716] Server  LOG      ○ Compiling / ...
+[00:00:18.065] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:42.845] Server  LOG      ○ Compiling /about ...
+[00:00:48.672] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:01:03.065] Server  LOG      ✓ Compiled in 92ms
+[00:03:57.186] Server  LOG      ✓ Compiled in 2.2s
+[00:10:16.191] Server  LOG      ✓ Compiled in 1068ms
+[00:11:33.575] Server  ERROR   TypeError: Invalid URL
+[00:13:36.037] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:36.377] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="about/" loading={null}>
+        <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/about" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+                <SegmentViewNode type="page" pagePath="about/page...">
+                  <SegmentTrieNode>
+                  <About>
+                    <main className="p-8 max-w-...">
+                      <h2>
+                      <div>
+                      <hr>
+                      <section>
+                        <h3>
+                        <Card sx={{maxWidth:345}}>
+                          <MuiCard-root className="MuiCard-root" elevation={undefined} ref={null} ownerState={{...}} ...>
+                            <Insertion>
+                            <Paper className="MuiCard-ro..." elevation={undefined}>
+                              <MuiPaper-root as="div" ownerState={{...}} className="MuiPaper-r..." ref={null} ...>
+                                <Insertion>
++                               <div
++                                 className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 Mui..."
++                                 style={{--Paper-shadow:"0px 2px 1p..."}}
++                               >
+-                               <style data-emotion="css vny07m-MuiCard-root" data-s="">
+                        ...
+                ...
+              ...
+
+[00:39:04.861] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:39:05.224] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="about/" loading={null}>
+        <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/about" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+                <SegmentViewNode type="page" pagePath="about/page...">
+                  <SegmentTrieNode>
+                  <About>
+                    <main className="p-8 max-w-...">
+                      <h2>
+                      <div>
+                      <hr>
+                      <section>
+                        <h3>
+                        <Card sx={{maxWidth:345}}>
+                          <MuiCard-root className="MuiCard-root" elevation={undefined} ref={null} ownerState={{...}} ...>
+                            <Insertion>
+                            <Paper className="MuiCard-ro..." elevation={undefined}>
+                              <MuiPaper-root as="div" ownerState={{...}} className="MuiPaper-r..." ref={null} ...>
+                                <Insertion>
++                               <div
++                                 className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 Mui..."
++                                 style={{--Paper-shadow:"0px 2px 1p..."}}
++                               >
+-                               <style data-emotion="css vny07m-MuiCard-root" data-s="">
+                        ...
+                ...
+              ...
+
