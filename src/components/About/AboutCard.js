@@ -37,6 +37,12 @@ function AboutCard() {
               <span className="blue"> <GoIssueClosed /> </span> I am passionate about traveling and exploring new places, it is curious to know new cultures and customs. Cause I like talking a lot
             </li>
             <li className="about-activity">
+              <span className="blue"> <GoIssueClosed /> </span> The gym keeps me physically and mentally strong — it has always helped me a lot.
+            </li>
+            <li className="about-activity">
+              <span className="blue"> <GoIssueClosed /> </span> I love listening to music, I basically have it on all day. My taste is mixed — classical music, pagode, trap, and more. My favorite song is “Tá Escrito” by Grupo Revelação.
+            </li>
+            <li className="about-activity">
               <span className="blue"> <GoIssueClosed /> </span> And of course, I have my heart team. Corinthians since I was born, thanks to my hero, MY DAD!
             </li>
           </ul>

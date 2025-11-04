@@ -45,8 +45,8 @@ function Home() {
                   borderRadius: "50%",
                   border: "5px solid #60d3e7",
                   objectFit: "cover",
-                  width: "300px",
-                  height: "300px",
+                  width: "350px",
+                  height: "350px",
                 }}
               />
             </Col>
