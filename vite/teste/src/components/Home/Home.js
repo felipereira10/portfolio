@@ -1,15 +1,13 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import homeLogo from "../../Assets/home-main.svg";
+import homeLogo from "../../Assets/me.jpg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
-import Techstack from "../About/Techstack";
-import Github from "../About/Github";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
+  AiOutlineMail,
+  AiOutlinePhone,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -43,13 +41,20 @@ function Home() {
                 src={homeLogo}
                 alt="home pic"
                 className="img-fluid"
-                style={{ maxHeight: "450px" }}
+                style={{
+                  borderRadius: "50%",
+                  border: "5px solid #60d3e7",
+                  objectFit: "cover",
+                  width: "300px",
+                  height: "300px",
+                }}
               />
             </Col>
           </Row>
         </Container>
+        <Home2 />
       </Container>
-      <Home2 />
+
 
       <Container>
         <Row style={{ paddingTop: "50px", paddingBottom: "80px" }}>
@@ -81,12 +86,23 @@ function Home() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.instagram.com/soumyajit4419"
+                  href="mailto:felipe.pereira99@outlook.com"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
-                  <AiFillInstagram />
+                  <AiOutlineMail />
+                </a>
+              </li>
+
+              <li className="social-icons">
+                <a
+                  href="https://wa.me/5512992085449?text=Olá%20Felipe!%20Vim%20pelo%20seu%20portfólio.%20Podemos%20conversar?"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour home-social-icons"
+                >
+                  <AiOutlinePhone />
                 </a>
               </li>
             </ul>

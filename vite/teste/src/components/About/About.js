@@ -1,10 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
-import Github from "./Github";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
-import laptopImg from "../../Assets/about.png";
+import aboutImg from "../../Assets//about/hackerNinja.jpg";
 import Toolstack from "./Toolstack";
 
 function About() {
@@ -14,6 +13,17 @@ function About() {
       <Particle />
       <Container fluid className="about-section">
         <Container>
+          <h1 className="project-heading">
+            Professional <strong className="blue">Skillset </strong>
+          </h1>
+
+          <Techstack />
+
+          <h1 className="project-heading">
+            <strong className="blue">Tools</strong> I use
+          </h1>
+          <Toolstack />
+
           <Row style={{ justifyContent: "center", padding: "10px" }}>
             <Col
               md={7}
@@ -33,21 +43,13 @@ function About() {
               style={{ paddingTop: "120px", paddingBottom: "50px" }}
               className="about-img"
             >
-              <img src={laptopImg} alt="about" className="img-fluid" />
+              <div className="image-wrapper">
+                <img src={aboutImg} alt="about" className="img-fluid rounded-profile" />
+              </div>
             </Col>
           </Row>
-          <h1 className="project-heading">
-            Professional <strong className="blue">Skillset </strong>
-          </h1>
 
-          <Techstack />
 
-          <h1 className="project-heading">
-            <strong className="blue">Tools</strong> I use
-          </h1>
-          <Toolstack />
-
-          <Github />
         </Container>
       </Container>
     </>
