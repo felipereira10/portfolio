@@ -4,6 +4,14 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import GameImg from "../../Assets/about/RD2.webp";
+import ThaiImg from "../../Assets/about/Thai.webp";
+import AnimeImg from "../../Assets/about/luffy.gif";
+import TravelImg from "../../Assets/about/farellones.webp";
+import GymImg from "../../Assets/about/gym.webp";
+import MusicImg from "../../Assets/about/Thai.webp";
+import TeamImg from "../../Assets/about/Corinthians.webp";
+
 function BasicExample() {
   return (
     <Container className="my-5"> 
@@ -13,7 +21,7 @@ function BasicExample() {
         {/* GAMES */}
         <Col xs={12} md={6} lg={4} xl={3} className="d-flex">
           <Card className="flex-fill">
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Img variant="top" src={GameImg} />
             <Card.Body>
               <Card.Title>Games</Card.Title>
               <Card.Text>
@@ -24,10 +32,10 @@ function BasicExample() {
           </Card>
         </Col>
 
-        {/* GAMES */}
+        {/* MARTIAL ARTS */}
         <Col xs={12} md={6} lg={4} xl={3} className="d-flex">
           <Card className="flex-fill">
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Img variant="top" src={ThaiImg} />
             <Card.Body>
               <Card.Title>Martial Arts</Card.Title>
               <Card.Text>
@@ -41,7 +49,7 @@ function BasicExample() {
         {/* ANIMES */}
         <Col xs={12} md={6} lg={4} xl={3} className="d-flex">
           <Card className="flex-fill">
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Img variant="top" src={AnimeImg} />
             <Card.Body>
               <Card.Title>Animes and Manga</Card.Title>
               <Card.Text>
@@ -55,7 +63,7 @@ function BasicExample() {
         {/* TRAVEL */}
         <Col xs={12} md={6} lg={4} xl={3} className="d-flex">
           <Card className="flex-fill">
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Img variant="top" src={TravelImg} />
             <Card.Body>
               <Card.Title>Travel</Card.Title>
               <Card.Text>
@@ -69,7 +77,7 @@ function BasicExample() {
         {/* GYM */}
         <Col xs={12} md={6} lg={4} xl={3} className="d-flex">
           <Card className="flex-fill">
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Img variant="top" src={GymImg} />
             <Card.Body>
               <Card.Title>Gym</Card.Title>
               <Card.Text>
@@ -83,7 +91,7 @@ function BasicExample() {
         {/* MUSIC */}
         <Col xs={12} md={6} lg={4} xl={3} className="d-flex">
           <Card className="flex-fill">
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Img variant="top" src={ThaiImg} />
             <Card.Body>
               <Card.Title>Music</Card.Title>
               <Card.Text>
@@ -97,7 +105,7 @@ function BasicExample() {
         {/* MY TEAM */}
         <Col xs={12} md={6} lg={4} xl={3} className="d-flex">
           <Card className="flex-fill">
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Img variant="top" src={TeamImg} />
             <Card.Body>
               <Card.Title>My Team</Card.Title>
               <Card.Text>

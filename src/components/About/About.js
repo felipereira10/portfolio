@@ -6,6 +6,7 @@ import Aboutcard from "./AboutCard";
 import aboutImg from "../../Assets//about/hackerNinja.jpg";
 import Toolstack from "./Toolstack";
 import CardHobbies from './CardHobbies';
+import MusicCard from './MusicCard';
 
 function About() {
   return (
@@ -49,6 +50,7 @@ function About() {
               </div>
             </Col>
           </Row>
+          <MusicCard />
           <CardHobbies />
         </Container>
       </Container>

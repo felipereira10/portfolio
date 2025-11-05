@@ -359,16 +359,17 @@ button:focus {
 
 .home-social-icons {
   position: relative !important;
-  display: inline-block !important;
-  width: 40px !important;
-  height: 40px !important;
-  text-align: center !important;
-  font-size: 1.2em !important;
-  line-height: 2em !important;
+  width: 50px !important;
+  height: 50px !important;
+  font-size: 1.8em !important;
   background: rgba(255, 255, 255, 0.972) !important;
   border-radius: 50% !important;
   transition: 0.5s !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
+
 
 .home-social-icons::before {
   content: "";
@@ -393,6 +394,7 @@ button:focus {
   color: #4393a1;
   box-shadow: 0 0 5px #4393a1;
   text-shadow: 0 0 2px #4393a1;
+  transform: scale(1.15);
 }
 
 .social-icons {
@@ -409,7 +411,7 @@ button:focus {
 /* Footer */
 /* --------- */
 .footer {
-  background-color: rgb(6, 4, 22);
+  background-color: rgba(8, 8, 44, 0.644);
   bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
@@ -443,6 +445,7 @@ button:focus {
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
   padding: 0 !important;
+  color: #fff;
 }
 
 .blockquote-footer {
