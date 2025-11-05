@@ -1,7 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { GoIssueClosed } from "react-icons/go";
-import RecipeReviewCard from "./RecipeReviewCard";
 
 function AboutCard() {
   return (
@@ -33,7 +32,7 @@ function AboutCard() {
               <span className="blue"> <GoIssueClosed /> </span> I practice Muay Thai and Brazilian Jiu Jitsu, which taught me discipline and respect. My idol is the Poatan
             </li>
             <li className="about-activity">
-              <span className="blue"> <GoIssueClosed /> </span> I love anime and manga, because I have been taught a lot since I was a kid! (Example: One Piece, Hunter x Hunter, Death Note, Nanatsu no Taizai and many others too)
+              <span className="blue"> <GoIssueClosed /> </span> I love anime and manga, because I have been taught a lot since I was a kid! (Example: One Piece, Hunter x Hunter, Death Note, Kimetsu no Yaiba and many others too)
             </li>
             <li className="about-activity">
               <span className="blue"> <GoIssueClosed /> </span>I'm passionate about traveling and discovering new cultures — I love talking to people and learning their customs.
@@ -56,7 +55,6 @@ function AboutCard() {
         </blockquote>
       </Card.Body>
     </Card>
-    <RecipeReviewCard />
     </>
   );
 }

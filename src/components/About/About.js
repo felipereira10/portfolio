@@ -5,6 +5,7 @@ import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import aboutImg from "../../Assets//about/hackerNinja.jpg";
 import Toolstack from "./Toolstack";
+import CardHobbies from './CardHobbies';
 
 function About() {
   return (
@@ -48,8 +49,7 @@ function About() {
               </div>
             </Col>
           </Row>
-
-
+          <CardHobbies />
         </Container>
       </Container>
     </>
