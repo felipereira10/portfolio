@@ -55,8 +55,8 @@ function AboutCard() {
           <footer className="blockquote-footer">Racionais MC's</footer>
         </blockquote>
       </Card.Body>
-      <RecipeReviewCard />
     </Card>
+    <RecipeReviewCard />
     </>
   );
 }

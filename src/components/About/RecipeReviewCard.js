@@ -1,112 +1,118 @@
+import {
+  IoGameControllerOutline,
+  IoBookOutline,
+  IoAirplaneOutline,
+} from "react-icons/io5";
+
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
-import CardHeader from '@mui/material/CardHeader';
-import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import Collapse from '@mui/material/Collapse';
-import Avatar from '@mui/material/Avatar';
-import IconButton from '@mui/material/IconButton';
+import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import CardActionArea from '@mui/material/CardActionArea';
 
-const ExpandMore = styled((props) => {
-  const { expand, ...other } = props;
-  return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-  marginLeft: 'auto',
-  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-  transition: theme.transitions.create('transform', {
-    duration: theme.transitions.duration.shortest,
-  }),
-}));
+const HOBBIES = [
+  {
+    id: 1,
+    icon: <IoGameControllerOutline className="text-4xl text-blue-600" />,
+    title: "Jogos Estratégicos",
+    description:
+      "Melhora minha capacidade de planejamento e raciocínio lógico sob pressão.",
+  },
+  {
+    id: 2,
+    icon: <IoGameControllerOutline className="text-4xl text-blue-600" />,
+    title: "Artes Marciais",
+    description:
+      "Um exercício de coordenação, paciência e disciplina que se reflete no código.",
+  },
+  {
+    id: 3,
+    icon: <IoGameControllerOutline className="text-4xl text-blue-600" />,
+    title: "Animes e Mangás",
+    description:
+      "Um exercício de coordenação, paciência e disciplina que se reflete no código.",
+  },
+  {
+    id: 4,
+    icon: <IoAirplaneOutline className="text-4xl text-blue-600" />,
+    title: "Viajar",
+    description:
+      "Buscar novas culturas e perspectivas é fundamental para expandir a criatividade e visão de mundo.",
+  },
+];
 
-export default function RecipeReviewCard() {
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
-
+export default function About() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
-          </Avatar>
-        }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
-      />
-      <CardMedia
-        component="img"
-        height="194"
-        image="/static/images/cards/paella.jpg"
-        alt="Paella dish"
-      />
-      <CardContent>
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the mussels,
-          if you like.
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
-        <ExpandMore
-          expand={expanded}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </ExpandMore>
-      </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography sx={{ marginBottom: 2 }}>Method:</Typography>
-          <Typography sx={{ marginBottom: 2 }}>
-            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
-            aside for 10 minutes.
-          </Typography>
-          <Typography sx={{ marginBottom: 2 }}>
-            Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over
-            medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring
-            occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a
-            large plate and set aside, leaving chicken and chorizo in the pan. Add
-            pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook,
-            stirring often until thickened and fragrant, about 10 minutes. Add
-            saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
-          </Typography>
-          <Typography sx={{ marginBottom: 2 }}>
-            Add rice and stir very gently to distribute. Top with artichokes and
-            peppers, and cook without stirring, until most of the liquid is absorbed,
-            15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
-            mussels, tucking them down into the rice, and cook again without
-            stirring, until mussels have opened and rice is just tender, 5 to 7
-            minutes more. (Discard any mussels that don&apos;t open.)
-          </Typography>
-          <Typography>
-            Set aside off of the heat to let rest for 10 minutes, and then serve.
-          </Typography>
-        </CardContent>
-      </Collapse>
-    </Card>
+    <>
+      <main className="p-8 max-w-4xl mx-auto">
+        {/* ... Sua seção Sobre mim (Habilidades) ... */}
+        <h2 className="text-3xl font-bold mb-6 text-gray-800">Sobre mim</h2>
+
+        <div className="space-y-6 mb-12">
+          <p className="text-lg text-gray-700">
+            **Frontend:** Experiência em sites responsivos e interfaces
+            atraentes, garantindo performance em todos os dispositivos e
+            navegadores, sempre utilizando as melhores práticas e tecnologias
+            modernas.
+          </p>
+          <p className="text-lg text-gray-700">
+            **Backend:** Tenho experiência com APIs rápidas e eficientes,
+            garantindo desempenho e escalabilidade.
+          </p>
+          <p className="text-lg text-gray-700">
+            **Designer de UI:** Realizei pesquisas de design, criei interfaces
+            visuais intuitivas e implementei layouts responsivos para a melhor
+            experiência do usuário em qualquer dispositivo.
+          </p>
+        </div>
+
+        <hr className="my-10 border-gray-200" />
+
+        {/* === Seção de Hobbies com Ícones Profissionais === */}
+        <section>
+          <h3 className="text-2xl font-bold mb-6 text-gray-800">
+            Meus Hobbies
+          </h3>
+
+          <Card sx={{ maxWidth: 345 }}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image="../../public/img/cards/game.png"
+                alt="game"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Games
+                </Typography>
+                <Typography variant="body2" sx={{ color: "text.primary" }}>
+                  Melhora minha capacidade de planejamento e raciocínio lógico sob pressão.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {HOBBIES.map((hobby) => (
+              <div
+                key={hobby.id}
+                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-gray-100"
+              >
+                {/* AQUI É ONDE O COMPONENTE ÍCONE É RENDERIZADO */}
+                <div className="mb-3 text-blue-600">{hobby.icon}</div>
+
+                <h4 className="text-xl font-semibold mb-2 text-gray-800">
+                  {hobby.title}
+                </h4>
+
+                <p className="text-gray-600 text-sm">{hobby.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </main>
+    </>
   );
 }
