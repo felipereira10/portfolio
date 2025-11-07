@@ -1,61 +1,212 @@
-import { useTheme } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import SkipNextIcon from "@mui/icons-material/SkipNext";
+import { Box } from "@mui/material";
+import CardBootstrap from "react-bootstrap/Card";
+// import { useState, useRef, useEffect } from "react";
+// import { Card, CardContent, IconButton, Typography } from "@mui/material";
+// import { useTheme } from "@mui/material/styles";
+// import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+// import PauseIcon from "@mui/icons-material/Pause";
+// import GraphicEqIcon from "@mui/icons-material/GraphicEq";
+
+// const songs = [
+//   {
+//     title: "Tá Escrito",
+//     artist: "Grupo Revelação",
+//     preview: "https://filesamples.com/samples/audio/mp3/sample3.mp3",
+//   },
+//   {
+//     title: "Mockingbird",
+//     artist: "Eminem",
+//     preview:
+//       "https://p.scdn.co/mp3-preview/ca3d7a22d8c8b0a9d097d3a7cf7a2351e6658bc1?cid=774b29d4f13844c495f206cafdad9c86",
+//   },
+//   {
+//     title: "God’s Plan",
+//     artist: "Drake",
+//     preview:
+//       "https://p.scdn.co/mp3-preview/4a6b2dd8a8c6f8eac94a3e6c89b03f97a0939b60?cid=774b29d4f13844c495f206cafdad9c86",
+//   },
+// ];
 
 function MusicCard() {
-  const theme = useTheme();
-
   return (
-    <>
-      <Card sx={{ display: "flex" }}>
-        <Box sx={{ display: "flex", flexDirection: "column" }}>
-          <CardContent sx={{ flex: "1 0 auto" }}>
-            <Typography component="div" variant="h5">
-              Grupo Revelação - Tá Escrito
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              component="div"
-              sx={{ color: "text.secondary" }}
-            >
-              Grupo Revelação
-            </Typography>
-          </CardContent>
-          <Box sx={{ display: "flex", alignItems: "center", pl: 1, pb: 1 }}>
-            <IconButton aria-label="previous">
-              {theme.direction === "rtl" ? (
-                <SkipNextIcon />
-              ) : (
-                <SkipPreviousIcon />
-              )}
-            </IconButton>
-            <IconButton aria-label="play/pause">
-              <PlayArrowIcon sx={{ height: 38, width: 38 }} />
-            </IconButton>
-            <IconButton aria-label="next">
-              {theme.direction === "rtl" ? (
-                <SkipPreviousIcon />
-              ) : (
-                <SkipNextIcon />
-              )}
-            </IconButton>
-          </Box>
-        </Box>
-        <CardMedia
-          component="img"
-          sx={{ width: 151 }}
-          image="/static/images/cards/live-from-space.jpg"
-          alt="Live from space album cover"
-        />
-      </Card>
-    </>
+    <Box
+      sx={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        gap: 3,
+        mt: 3,
+      }}
+    >
+      {/* --- Tá Escrito --- */}
+      <CardBootstrap
+        style={{
+          width: 340,
+          backgroundColor: "#0f172a9a",
+          borderRadius: "12px",
+          outline: "1.5px solid #60d3e7",
+          boxShadow: "4px 5px 4px rgba(89, 4, 168, 0.137)",
+          color: "#fff",
+          overflow: "hidden",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = "scale(1.03)";
+          e.currentTarget.style.boxShadow = "0 0 20px rgba(96, 211, 231, 0.3)";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = "scale(1)";
+          e.currentTarget.style.boxShadow =
+            "4px 5px 4px rgba(89, 4, 168, 0.137)";
+        }}
+      >
+        <CardBootstrap.Body>
+          <CardBootstrap.Title
+            style={{ fontSize: "1.2rem", fontWeight: "bold" }}
+          >
+            Tá Escrito
+          </CardBootstrap.Title>
+          <CardBootstrap.Subtitle
+            className="mb-3 text-muted"
+            style={{ color: "#91d2ddff", fontSize: "0.9rem" }}
+          >
+            Grupo Revelação
+          </CardBootstrap.Subtitle>
+
+          <div
+            style={{
+              borderRadius: "12px",
+              overflow: "hidden",
+              height: "152px",
+              width: "100%",
+            }}
+          >
+            <iframe
+              data-testid="embed-iframe"
+              style={{ borderRadius: "12px" }}
+              src="https://open.spotify.com/embed/track/0rOQyLZJ9oASgtdoDZgrmK?utm_source=generator&theme=0"
+              width="100%"
+              height="352"
+              frameBorder={0}
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </CardBootstrap.Body>
+      </CardBootstrap>
+
+      {/* --- Mockingbird --- */}
+      <CardBootstrap
+        style={{
+          width: 340,
+          backgroundColor: "#0f172a9a",
+          borderRadius: "12px",
+          outline: "1.5px solid #60d3e7",
+          boxShadow: "4px 5px 4px rgba(89, 4, 168, 0.137)",
+          color: "#fff",
+          overflow: "hidden",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = "scale(1.03)";
+          e.currentTarget.style.boxShadow = "0 0 20px rgba(96, 211, 231, 0.3)";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = "scale(1)";
+          e.currentTarget.style.boxShadow =
+            "4px 5px 4px rgba(89, 4, 168, 0.137)";
+        }}
+      >
+        <CardBootstrap.Body>
+          <CardBootstrap.Title
+            style={{ fontSize: "1.2rem", fontWeight: "bold" }}
+          >
+            Mockingbird
+          </CardBootstrap.Title>
+          <CardBootstrap.Subtitle
+            className="mb-3 text-muted"
+            style={{ color: "#91d2ddff", fontSize: "0.9rem" }}
+          >
+            Eminem
+          </CardBootstrap.Subtitle>
+
+          <div
+            style={{
+              borderRadius: "12px",
+              overflow: "hidden",
+              height: "152px",
+              width: "100%",
+            }}
+          >
+            <iframe
+              data-testid="embed-iframe"
+              style={{ borderRadius: "12px" }}
+              src="https://open.spotify.com/embed/track/561jH07mF1jHuk7KlaeF0s?utm_source=generator"
+              width="100%"
+              height="352"
+              frameBorder={0}
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </CardBootstrap.Body>
+      </CardBootstrap>
+
+      {/* --- God’s Plan --- */}
+      <CardBootstrap
+        style={{
+          width: 340,
+          backgroundColor: "#0f172a9a",
+          borderRadius: "12px",
+          outline: "1.5px solid #60d3e7",
+          boxShadow: "4px 5px 4px rgba(89, 4, 168, 0.137)",
+          color: "#fff",
+          overflow: "hidden",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = "scale(1.03)";
+          e.currentTarget.style.boxShadow = "0 0 20px rgba(96, 211, 231, 0.3)";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = "scale(1)";
+          e.currentTarget.style.boxShadow =
+            "4px 5px 4px rgba(89, 4, 168, 0.137)";
+        }}
+      >
+        <CardBootstrap.Body>
+          <CardBootstrap.Title
+            style={{ fontSize: "1.2rem", fontWeight: "bold" }}
+          >
+            God’s Plan
+          </CardBootstrap.Title>
+          <CardBootstrap.Subtitle
+            className="mb-3 text-muted"
+            style={{ color: "#91d2ddff", fontSize: "0.9rem" }}
+          >
+            Drake
+          </CardBootstrap.Subtitle>
+
+          <div
+            style={{
+              borderRadius: "12px",
+              overflow: "hidden",
+              height: "152px",
+              width: "100%",
+            }}
+          >
+            <iframe
+              style={{ borderRadius: "12px" }}
+              src="https://open.spotify.com/embed/track/6DCZcSspjsKoFjzjrWoCdn?utm_source=generator"
+              width="100%"
+              height="152"
+              frameBorder={0}
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </CardBootstrap.Body>
+      </CardBootstrap>
+    </Box>
   );
 }
 

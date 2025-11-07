@@ -32,59 +32,27 @@ function AboutCard() {
                   {" "}
                   <GoIssueClosed />{" "}
                 </span>{" "}
-                I love games — they improve my logical thinking, introduced me
-                to amazing stories, and helped me make great friends. The GOAT
-                is Red Dead Redemption 2!!!
+                I’m passionate about technology and innovation — I love
+                exploring AI, automation, and everything that feels like magic
+                but is actually code.
               </li>
+
               <li className="about-activity">
                 <span className="blue">
                   {" "}
                   <GoIssueClosed />{" "}
                 </span>{" "}
-                I practice Muay Thai and Brazilian Jiu Jitsu, which taught me
-                discipline and respect. My idol is the Poatan
+                I’m always learning something new — tech never stops, and
+                neither do I.
               </li>
+
               <li className="about-activity">
                 <span className="blue">
                   {" "}
                   <GoIssueClosed />{" "}
                 </span>{" "}
-                I love anime and manga, because I have been taught a lot since I
-                was a kid! (Example: One Piece, Hunter x Hunter, Death Note,
-                Kimetsu no Yaiba and many others too)
-              </li>
-              <li className="about-activity">
-                <span className="blue">
-                  {" "}
-                  <GoIssueClosed />{" "}
-                </span>
-                I'm passionate about traveling and discovering new cultures — I
-                love talking to people and learning their customs.
-              </li>
-              <li className="about-activity">
-                <span className="blue">
-                  {" "}
-                  <GoIssueClosed />{" "}
-                </span>{" "}
-                The gym keeps me physically and mentally strong — it has always
-                helped me a lot.
-              </li>
-              <li className="about-activity">
-                <span className="blue">
-                  {" "}
-                  <GoIssueClosed />{" "}
-                </span>{" "}
-                I love listening to music, I basically have it on all day. My
-                taste is mixed — classical music, pagode, trap, and more. My
-                favorite song is “Tá Escrito” by Grupo Revelação.
-              </li>
-              <li className="about-activity">
-                <span className="blue">
-                  {" "}
-                  <GoIssueClosed />{" "}
-                </span>{" "}
-                And of course, I have my team. Corinthians since I was born —
-                thanks to my hero, MY DAD!
+                I enjoy creating projects from scratch and bringing ideas to
+                life through code.
               </li>
             </ul>
 

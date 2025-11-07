@@ -5,8 +5,8 @@ import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import aboutImg from "../../Assets//about/hackerNinja.jpg";
 import Toolstack from "./Toolstack";
-import CardHobbies from './CardHobbies';
-import MusicCard from './MusicCard';
+import CardHobbies from "./CardHobbies";
+import MusicCard from "./MusicCard";
 
 function About() {
   return (
@@ -46,11 +46,18 @@ function About() {
               className="about-img"
             >
               <div className="image-wrapper">
-                <img src={aboutImg} alt="about" className="img-fluid rounded-profile" />
+                <img
+                  src={aboutImg}
+                  alt="about"
+                  className="img-fluid rounded-profile"
+                />
               </div>
             </Col>
           </Row>
           <MusicCard />
+          <h1 style={{ fontSize: "2.1em", paddingTop: "60px" }}>
+            My <strong className="blue">Hobbies</strong>
+          </h1>
           <CardHobbies />
         </Container>
       </Container>

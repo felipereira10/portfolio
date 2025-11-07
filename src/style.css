@@ -803,3 +803,48 @@ button:focus {
 .rounded-profile:hover {
   transform: rotateY(360deg); /* faz o giro completo no eixo Y */
 }
+
+.music-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.music-title {
+  color: #60d3e7;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.music-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.music-card {
+  background-color: #0f172a9a;
+  border-radius: 16px;
+  box-shadow: 3px 4px 4px rgba(89, 4, 168, 0.137);
+  outline: 1.5px solid #60d3e7;
+  padding: 10px;
+  width: 260px;
+  transition: transform 0.3s ease, outline-color 0.3s ease;
+}
+
+.music-card:hover {
+  transform: scale(1.03);
+  outline-color: #91d2ddff;
+}
+
+.music-name {
+  color: #fff;
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+@media (max-width: 767px) {
+  .music-card {
+    width: 90%;
+  }
+}
