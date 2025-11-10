@@ -848,3 +848,26 @@ button:focus {
     width: 90%;
   }
 }
+
+.exp-card {
+  background-color: rgba(10, 10, 25, 0.85);
+  color: #f0f6fc; /* texto claro */
+  border: 1px solid rgba(0, 153, 255, 0.2);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+}
+
+.exp-card:hover {
+  transform: translateY(-5px) !important;
+  border: 1px solid rgba(96, 211, 231, 0.6) !important;
+  box-shadow: 0 0 20px rgba(96, 211, 231, 0.3) !important;
+}
+
+.exp-card .card-title,
+.exp-card .card-subtitle,
+.exp-card .card-text {
+  color: #f0f6fc;
+}

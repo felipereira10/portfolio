@@ -1,52 +1,34 @@
-import React from "react";
-import Particles from "react-tsparticles";
+import { Particles } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 
 function Particle() {
+  const particlesInit = async (engine) => {
+    await loadSlim(engine);
+  };
+
   return (
     <Particles
       id="tsparticles"
-      params={{
-        particles: {
-          number: {
-            value: 160,
-            density: {
-              enable: true,
-              value_area: 1500,
-            },
-          },
-          line_linked: {
-            enable: false,
-            opacity: 0.03,
-          },
-          move: {
-            direction: "right",
-            speed: 0.05,
-          },
-          size: {
-            value: 1,
-          },
-          opacity: {
-            anim: {
-              enable: true,
-              speed: 1,
-              opacity_min: 0.05,
-            },
-          },
-        },
+      init={particlesInit}
+      options={{
+        background: { color: { value: "#0a192f" } },
+        fpsLimit: 120,
         interactivity: {
           events: {
-            onclick: {
-              enable: true,
-              mode: "push",
-            },
+            onHover: { enable: true, mode: "repulse" },
           },
           modes: {
-            push: {
-              particles_nb: 1,
-            },
+            repulse: { distance: 100, duration: 0.4 },
           },
         },
-        retina_detect: true,
+        particles: {
+          color: { value: "#60d3e7" },
+          links: { color: "#60d3e7", distance: 150, enable: true },
+          move: { enable: true, speed: 2 },
+          number: { value: 60 },
+          opacity: { value: 0.3 },
+          size: { value: 2 },
+        },
       }}
     />
   );

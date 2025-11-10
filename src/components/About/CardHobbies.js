@@ -99,7 +99,7 @@ export default function StyledCarousel() {
               color: "white",
               overflow: "hidden",
               width: "90%",
-              height: "400px",
+              height: "420px",
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
