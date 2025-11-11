@@ -3,15 +3,18 @@ import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
 import { AiOutlineDownload } from "react-icons/ai";
-import { Document, Page, pdfjs } from "react-pdf";
-import * as pdfjsLib from "pdfjs-dist";
+// import { Document, Page, pdfjs } from "react-pdf"; // ⬅️ Não precisamos mais destas importações
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.js`;
+// O PDF.js worker não é necessário para o <iframe>, mas se você precisar
+// usar outros recursos do PDF.js, esta é a forma correta de configurá-lo.
+// pdfjs.GlobalWorkerOptions.workerSrc = `/pdf.worker.min.js`; 
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
 
-  const pdf = process.env.PUBLIC_URL + "/Felipe-Pereira.pdf";
+  // O caminho do PDF, que deve estar na sua pasta 'public'
+  const pdf = "/Felipe-Pereira.pdf";
+  const pdfUrlWithParams = `${pdf}#toolbar=0&zoom=100,0,0`;
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -32,6 +35,7 @@ function ResumeNew() {
       >
         <Particle />
 
+        {/* 1. Botões de Download */}
         <Row
           style={{
             justifyContent: "center",
@@ -39,6 +43,7 @@ function ResumeNew() {
             marginBottom: "40px",
           }}
         >
+          {/* Botão em Inglês */}
           <Button
             variant="primary"
             href={pdf}
@@ -64,6 +69,7 @@ function ResumeNew() {
             &nbsp;Download CV in English
           </Button>
 
+          {/* Botão em Português */}
           <Button
             variant="primary"
             href={pdf}
@@ -89,6 +95,7 @@ function ResumeNew() {
           </Button>
         </Row>
 
+        {/* 2. Visualizador do Currículo (iframe) */}
         <Row
           className="resume"
           style={{
@@ -103,11 +110,24 @@ function ResumeNew() {
               padding: "30px",
               boxShadow: "0 0 30px rgba(0, 123, 255, 0.3)",
               transition: "transform 0.3s ease-in-out",
+              width: width > 786 ? "80%" : "100%",
+              height: "1000px", // Define a altura para o iframe
+              overflow: 'hidden',
             }}
           >
-            <Document file={pdf} className="d-flex justify-content-center">
-              <Page pageNumber={1} scale={width > 786 ? 1.5 : 0.6} />
-            </Document>
+            <iframe
+              src={pdfUrlWithParams}
+              style={{
+                width: "100%",
+                height: "100%",
+                border: "none",
+                borderRadius: "8px",
+                overflow: 'auto',
+              }}
+              title="Visualizador de Currículo"
+            >
+              <p>O seu navegador não suporta a visualização de PDF integrada.</p>
+            </iframe>
           </div>
         </Row>
       </Container>
