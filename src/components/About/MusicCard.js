@@ -29,15 +29,19 @@ import CardBootstrap from "react-bootstrap/Card";
 
 function MusicCard() {
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "center",
-        gap: 3,
-        mt: 3,
-      }}
-    >
+    <Box>
+      <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
+        My <strong className="blue">Favorite Songs</strong>
+      </h1>
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          gap: 3,
+          mt: 3,
+        }}
+      >
       {/* --- Tá Escrito --- */}
       <CardBootstrap
         style={{
@@ -173,7 +177,6 @@ function MusicCard() {
             "4px 5px 4px rgba(89, 4, 168, 0.137)";
         }}
       >
-        <CardBootstrap.Body>
           <CardBootstrap.Title
             style={{ fontSize: "1.2rem", fontWeight: "bold" }}
           >
@@ -204,8 +207,8 @@ function MusicCard() {
               loading="lazy"
             ></iframe>
           </div>
-        </CardBootstrap.Body>
       </CardBootstrap>
+      </Box>
     </Box>
   );
 }

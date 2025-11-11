@@ -22,8 +22,6 @@ function AboutCard() {
               <span className="blue">FATEC São José dos Campos</span>.
               <br />
               <br />
-              Outside of coding, I love engaging in activities that keep me
-              creative and inspired:
             </p>
 
             <ul>
@@ -61,6 +59,12 @@ function AboutCard() {
             </p>
             <footer className="blockquote-footer">Racionais MC's</footer>
           </blockquote>
+          <br />
+          <br />
+          <p style={{ textAlign: "justify" }}>
+            Outside of coding, I love engaging in activities that keep me
+            creative and inspired:
+          </p>
         </Card.Body>
       </Card>
     </>

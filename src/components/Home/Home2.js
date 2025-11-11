@@ -51,14 +51,13 @@ function Home2() {
         </h1>
         <Row style={{ marginTop: "60px" }}>
           <Col md={6}>
-            <Card className="exp-card bg-dark text-light">
-              <Card.Body>
+              <Card.Body className="exp-card" style={{ height: "100%", padding: "14px" }}>
                 <Card.Title>
                   <strong className="blue">
                     Full Stack Developer - Intern
                   </strong>
                 </Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
+                <Card.Subtitle className="subtitle">
                   Redenção Turismo | Jan 2025 - Present
                 </Card.Subtitle>
                 <Card.Text>
@@ -70,17 +69,15 @@ function Home2() {
                   service, and Linux system administration.
                 </Card.Text>
               </Card.Body>
-            </Card>
           </Col>
 
           <Col md={6}>
-            <Card className="exp-card bg-dark text-light">
-              <Card.Body>
+              <Card.Body className="exp-card" style={{ height: "100%", padding: "14px" }}>
                 <Card.Title>
                   <strong className="blue">Software Developer</strong>
                 </Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
-                  2023 - 2024
+                <Card.Subtitle className="subtitle">
+                  Freelancer | mar 2023 - dec 2024
                 </Card.Subtitle>
                 <Card.Text>
                   Developed and maintained full-stack applications using{" "}
@@ -90,14 +87,13 @@ function Home2() {
                   interactive user dashboards.
                 </Card.Text>
               </Card.Body>
-            </Card>
           </Col>
         </Row>
 
         {/* CALL TO ACTION */}
         <Row style={{ marginTop: "60px" }}>
           <Col>
-            <p className="home-about-body">
+            <p className="home-about-body" style={{ fontSize: "1.2em", textAlign: "center" }}>
               Reach out if you'd like to learn more about my work or discuss new
               opportunities!
             </p>
