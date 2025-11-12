@@ -5,27 +5,20 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
-import GameImg from "../../Assets/about/RD2.png";
+import GameImg from "../../Assets/about/RD2.webp";
 import ThaiImg from "../../Assets/about/Thai.webp";
-import AnimeImg from "../../Assets/about/Gear5.png";
+import AnimeImg from "../../Assets/about/luffy.gif";
 import TravelImg from "../../Assets/about/farellones.webp";
 import GymImg from "../../Assets/about/gym.webp";
 import TeamImg from "../../Assets/about/Corinthians.webp";
-import MusicImg from "../../Assets/about/music.png";
-import { GoIssueClosed } from "react-icons/go";
 
 const items = [
   {
     title: "Games",
     img: GameImg,
     text: "I love games — they improve my logical thinking, introduced me to amazing stories, and helped me make great friends. The GOAT is Red Dead Redemption 2!!!",
-    extra: [
-      "God of War II",
-      "GTA San Andreas",
-      "GTA IV",
-      "Def Jam: Fight for NY",
-      "League of Legends",
-    ],
+    extra:
+      "My favorite games besides RD2 are:\n- God of War II\n- GTA San Andreas and GTA IV\n- Def Jam NY\n- League of Legends",
   },
   {
     title: "Martial Arts",
@@ -38,7 +31,7 @@ const items = [
     title: "Animes and Manga",
     img: AnimeImg,
     text: "I love anime and manga — they’ve taught me a lot since I was a kid!",
-    extra: 
+    extra:
       "My favorites:\n- One Piece\n- Kimetsu no Yaiba\n- Hunter x Hunter\n- Jujutsu Kaisen\n- Shingeki no Kyojin\n- Death Note",
   },
   {
@@ -57,9 +50,10 @@ const items = [
   },
   {
     title: "Music",
-    img: MusicImg,
-    text: "I love listening to music, I basically have it on all day. My taste is mixed — classical music, pagode, trap, and more.",
-    extra: "My favorite song is “Tá Escrito” by Grupo Revelação.",
+    img: ThaiImg,
+    text: "I love listening to music, I basically have it on all day. My taste is mixed — classical music, pagode, trap, and more. My favorite song is “Tá Escrito” by Grupo Revelação.",
+    extra:
+      "My recommendations:",
   },
   {
     title: "My Team",
@@ -74,7 +68,7 @@ const responsive = {
   superLargeDesktop: { breakpoint: { max: 4000, min: 1400 }, items: 3 },
   desktop: { breakpoint: { max: 1400, min: 1024 }, items: 3 },
   tablet: { breakpoint: { max: 1024, min: 768 }, items: 2 },
-  mobile: { breakpoint: { max: 768, min: 0 }, items: 2 },
+  mobile: { breakpoint: { max: 768, min: 0 }, items: 1 },
 };
 
 export default function StyledCarousel() {
@@ -203,8 +197,11 @@ export default function StyledCarousel() {
         onHide={() => setSelectedItem(null)}
         centered
         backdrop={false}
+
         dialogClassName="custom-modal-dialog"
+
         contentClassName="mini-modal"
+
         style={{
           background: "transparent",
         }}
@@ -216,52 +213,32 @@ export default function StyledCarousel() {
               color: "#cbd5e1",
               border: "1px solid #60d3e7",
               borderRadius: "12px",
-              padding: "1.2rem",
+              boxShadow: "0 0 20px rgba(96, 211, 231, 0.4)",
+              padding: "16px",
+              // maxWidth: "300px", 
+              // margin: "0 auto", 
+              textAlign: "center",
+              position: 'relative',
             }}
           >
-            <p style={{ whiteSpace: "pre-line", textAlign: "center" }}>
-              {selectedItem.text}
-            </p>
-
-            {Array.isArray(selectedItem.extra) && (
-              <ul
-                style={{
-                  listStyle: "none",
-                  padding: 0,
-                  marginTop: "10px",
-                  textAlign: "left",
-                }}
-              >
-                {selectedItem.extra.map((game, i) => (
-                  <li
-                    key={i}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "8px",
-                      marginBottom: "4px",
-                      color: "#93c5fd",
-                    }}
-                  >
-                    <GoIssueClosed color="#60d3e7" size={18} />
-                    <span>{game}</span>
-                  </li>
-                ))}
-              </ul>
-            )}
+            <h5 style={{ color: "#60d3e7" }}>{selectedItem.title}</h5>
+            <p style={{ fontSize: "0.9rem" }}>{selectedItem.extra}</p>
             <Button
-              variant="outline-light"
-              size="sm"
               style={{
+                backgroundColor: "#60d3e7",
+                border: "none",
+                color: "#0f172a",
+                fontWeight: "600",
                 borderRadius: "8px",
-                border: "1px solid #60d3e7",
-                color: "#60d3e7",
-                marginTop: "8px",
-                alignItems: "center",
-                display: "block",
-                marginLeft: "auto",
-                marginRight: "auto",
+                padding: "6px 16px",
+                transition: "0.3s",
               }}
+              onMouseOver={(e) =>
+                (e.currentTarget.style.backgroundColor = "#3cbfd1")
+              }
+              onMouseOut={(e) =>
+                (e.currentTarget.style.backgroundColor = "#60d3e7")
+              }
               onClick={() => setSelectedItem(null)}
             >
               Close

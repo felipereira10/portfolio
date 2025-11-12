@@ -159,12 +159,12 @@ function MusicCard() {
             <CardBootstrap.Title
               style={{ fontSize: "1.2rem", fontWeight: "bold" }}
             >
-              God’s Plan
+              Lugar Ao Sol
             </CardBootstrap.Title>
             <CardBootstrap.Subtitle
               style={{ color: "#91d2ddff", fontSize: "0.9rem" }}
             >
-              Drake
+              Charlie Brown Jr.
             </CardBootstrap.Subtitle>
             <div
               style={{
@@ -174,7 +174,7 @@ function MusicCard() {
                 width: "100%",
               }}
             >
-              <iframe data-testid="embed-iframe" style={{ borderRadius: "12px" }} src="https://open.spotify.com/embed/track/6DCZcSspjsKoFjzjrWoCdn?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              <iframe data-testid="embed-iframe" style={{ borderRadius: "12px" }} src="https://open.spotify.com/embed/track/4gEFeIEORz8thfqMY7nKcb?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
           </CardBootstrap.Body>
         </CardBootstrap>

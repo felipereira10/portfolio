@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
-import aboutImg from "../../Assets/about/hackerNinja.jpg";
+import aboutImg from "../../Assets/about/Boy&Cat.jpeg";
 import Toolstack from "./Toolstack";
 import CardHobbies from "./CardHobbies";
 import MusicCard from "./MusicCard";
@@ -50,6 +50,7 @@ function About() {
                   src={aboutImg}
                   alt="about"
                   className="img-fluid rounded-profile"
+                  style={{ height: "400px", width: "auto" }}
                 />
               </div>
             </Col>
