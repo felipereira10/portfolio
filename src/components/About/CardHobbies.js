@@ -105,6 +105,7 @@ export default function StyledCarousel() {
               borderRadius: "16px",
               boxShadow: "0 0 15px rgba(96, 211, 231, 0.2)",
               color: "white",
+              transformOrigin: "center center",
               overflow: "hidden",
               width: "90%",
               height: "420px",
@@ -195,14 +196,24 @@ export default function StyledCarousel() {
         show={!!selectedItem}
         onHide={() => setSelectedItem(null)}
         centered
+        // 🚨 CORREÇÃO 1: Remova a propriedade 'backdrop={false}' se quiser o fundo escuro.
+        // Se quiser que ele flutue sem fundo escuro (como na imagem), MANTENHA 'backdrop={false}'
         backdrop={false}
-        contentClassName="mini-modal"
+
+        // 🚨 CORREÇÃO 2: Use uma classe para o container principal do Modal.
+        dialogClassName="custom-modal-dialog"
+
+        contentClassName="mini-modal" // Essa classe já existe
+
         style={{
           background: "transparent",
         }}
       >
         {selectedItem && (
           <Modal.Body
+            // 🚨 CORREÇÃO 3: Adicionar o componente de Fechar e mostrar o Header
+            // O Modal padrão precisa de Modal.Header para mostrar o X de fechar
+
             style={{
               backgroundColor: "#0f172a",
               color: "#cbd5e1",
@@ -210,9 +221,10 @@ export default function StyledCarousel() {
               borderRadius: "12px",
               boxShadow: "0 0 20px rgba(96, 211, 231, 0.4)",
               padding: "16px",
-              maxWidth: "300px",
-              margin: "0 auto",
+              // maxWidth: "300px", 
+              // margin: "0 auto", 
               textAlign: "center",
+              position: 'relative', // Para posicionar o botão Fechar
             }}
           >
             <h5 style={{ color: "#60d3e7" }}>{selectedItem.title}</h5>

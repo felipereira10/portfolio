@@ -22,8 +22,8 @@ function Particle() {
           },
         },
         particles: {
-          color: { value: "#60d3e7" },
-          links: { color: "#60d3e7", distance: 150, enable: true },
+          color: { value: "#E0FFFF" },
+          links: { color: "#E0FFFF", distance: 150, enable: true },
           move: { enable: true, speed: 2 },
           number: { value: 60 },
           opacity: { value: 0.3 },
