@@ -3,11 +3,12 @@ import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
 import { AiOutlineDownload } from "react-icons/ai";
-// import { Document, Page, pdfjs } from "react-pdf"; // ⬅️ Não precisamos mais destas importações
+import Folder from './Folder';
+// import { Document, Page, pdfjs } from "react-pdf";
 
 // O PDF.js worker não é necessário para o <iframe>, mas se você precisar
 // usar outros recursos do PDF.js, esta é a forma correta de configurá-lo.
-// pdfjs.GlobalWorkerOptions.workerSrc = `/pdf.worker.min.js`; 
+// pdfjs.GlobalWorkerOptions.workerSrc = `/pdf.worker.min.js`;
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
@@ -112,7 +113,7 @@ function ResumeNew() {
               transition: "transform 0.3s ease-in-out",
               width: width > 786 ? "80%" : "100%",
               height: "1000px", // Define a altura para o iframe
-              overflow: 'hidden',
+              overflow: "hidden",
             }}
           >
             <iframe
@@ -122,12 +123,18 @@ function ResumeNew() {
                 height: "100%",
                 border: "none",
                 borderRadius: "8px",
-                overflow: 'auto',
+                overflow: "auto",
               }}
               title="Visualizador de Currículo"
             >
-              <p>O seu navegador não suporta a visualização de PDF integrada.</p>
+              <p>
+                O seu navegador não suporta a visualização de PDF integrada.
+              </p>
             </iframe>
+
+            <div style={{ height: "600px", position: "relative" }}>
+              <Folder size={2} color="#5227FF" className="custom-folder" />
+            </div>
           </div>
         </Row>
       </Container>

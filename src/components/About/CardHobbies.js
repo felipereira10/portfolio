@@ -115,7 +115,7 @@ export default function StyledCarousel() {
             style={{
               backgroundColor: "#0f172a",
               border: "none",
-              outline: "1.5px solid #60d3e7",
+              outline: "1.5px solid rgba(96, 211, 231, 1)",
               borderRadius: "16px",
               boxShadow: "0 0 15px rgba(96, 211, 231, 0.2)",
               color: "white",
