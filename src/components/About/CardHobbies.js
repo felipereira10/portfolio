@@ -38,8 +38,16 @@ const items = [
     title: "Animes and Manga",
     img: AnimeImg,
     text: "I love anime and manga — they’ve taught me a lot since I was a kid!",
-    extra: 
-      "My favorites:\n- One Piece\n- Kimetsu no Yaiba\n- Hunter x Hunter\n- Jujutsu Kaisen\n- Shingeki no Kyojin\n- Death Note",
+    extra:  ["My favorites:",
+      "One Piece",
+      "Kimetsu no Yaiba",
+      "Hunter x Hunter",
+      "Jujutsu Kaisen",
+      "Shingeki no Kyojin",
+      "Death Note",
+      "Naruto",
+    ],
+  
   },
   {
     title: "Travel",

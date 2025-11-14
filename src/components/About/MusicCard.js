@@ -31,7 +31,7 @@ function MusicCard() {
   return (
     <Box>
       <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-        My <strong className="blue">Favorite Songs</strong>
+        My <strong className="blue">Favorite</strong> Songs
       </h1>
       <Box
         sx={{

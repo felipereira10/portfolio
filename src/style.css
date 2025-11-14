@@ -951,6 +951,25 @@ button:focus {
   overflow: visible !important;
 }
 
+.custom-carousel .react-multiple-carousel__arrow {
+  background: rgba(96, 211, 231, 0.2) !important;
+  border: 1px solid #60d3e7 !important;
+  backdrop-filter: blur(4px);
+  opacity: 1 !important;
+  transition: 0.25s ease;
+}
+
+.custom-carousel .react-multiple-carousel__arrow::before {
+  color: #60d3e7 !important;
+  font-size: 22px;
+}
+
+.custom-carousel .react-multiple-carousel__arrow:hover {
+  background: rgba(96, 211, 231, 0.35) !important;
+  border-color: #7ee6f7 !important;
+  box-shadow: 0 0 12px rgba(96, 211, 231, 0.5);
+}
+
 .react-multi-carousel-track {
   padding-top: 10px;
   padding-bottom: 10px;
