@@ -38,7 +38,8 @@ const items = [
     title: "Animes and Manga",
     img: AnimeImg,
     text: "I love anime and manga — they’ve taught me a lot since I was a kid!",
-    extra:  ["My favorites:",
+    extra: [
+      "My favorites:",
       "One Piece",
       "Kimetsu no Yaiba",
       "Hunter x Hunter",
@@ -47,21 +48,20 @@ const items = [
       "Death Note",
       "Naruto",
     ],
-  
   },
   {
     title: "Travel",
     img: TravelImg,
     text: "I'm passionate about traveling and discovering new cultures — I love talking to people and learning their customs.",
     extra:
-      "My dream is to visit **Switzerland** and Japan someday — I have been to many beaches, and my first international trip was to Chile, fulfilling one of my biggest dreams: touching the snow.",
+      "My dream is to visit Switzerland and Japan someday — I have been to many beaches, and my first international trip was to Chile, fulfilling one of my biggest dreams: touching the snow.",
   },
   {
     title: "Gym",
     img: GymImg,
     text: "The gym keeps me physically and mentally strong — it has always helped me a lot.",
     extra:
-      "The gym helped me overcome depression and has been one of the greatest pillars of my life in recent years.",
+      "It helped me overcome depression and has been one of the greatest pillars of my life in recent years.",
   },
   {
     title: "Music",
@@ -227,36 +227,86 @@ export default function StyledCarousel() {
               padding: "1.2rem",
             }}
           >
-            <p style={{ whiteSpace: "pre-line", textAlign: "center" }}>
-              {selectedItem.text}
-            </p>
-
-            {Array.isArray(selectedItem.extra) && (
-              <ul
-                style={{
-                  listStyle: "none",
-                  padding: 0,
-                  marginTop: "10px",
-                  textAlign: "left",
-                }}
-              >
-                {selectedItem.extra.map((game, i) => (
-                  <li
-                    key={i}
+            {Array.isArray(selectedItem.extra) ? (
+              selectedItem.title === "Animes and Manga" ? (
+                <>
+                  {/* Título (primeiro item) */}
+                  <p
                     style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "8px",
-                      marginBottom: "4px",
-                      color: "#93c5fd",
+                      textAlign: "center",
+                      fontWeight: "600",
+                      color: "#60d3e7",
+                      marginBottom: "10px",
+                      fontSize: "1.05rem",
                     }}
                   >
-                    <GoIssueClosed color="#60d3e7" size={18} />
-                    <span>{game}</span>
-                  </li>
-                ))}
-              </ul>
+                    {selectedItem.extra[0]}
+                  </p>
+
+                  {/* Lista normal do restante */}
+                  <ul
+                    style={{
+                      listStyle: "none",
+                      padding: 0,
+                      margin: 0,
+                      textAlign: "left",
+                    }}
+                  >
+                    {selectedItem.extra.slice(1).map((item, i) => (
+                      <li
+                        key={i}
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "8px",
+                          marginBottom: "6px",
+                          color: "#93c5fd",
+                        }}
+                      >
+                        <GoIssueClosed color="#60d3e7" size={18} />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              ) : (
+                <ul
+                  style={{
+                    listStyle: "none",
+                    padding: 0,
+                    margin: 0,
+                    textAlign: "left",
+                  }}
+                >
+                  {selectedItem.extra.map((item, i) => (
+                    <li
+                      key={i}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "8px",
+                        marginBottom: "6px",
+                        color: "#93c5fd",
+                      }}
+                    >
+                      <GoIssueClosed color="#60d3e7" size={18} />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              )
+            ) : (
+              <p
+                style={{
+                  whiteSpace: "pre-line",
+                  textAlign: "center",
+                  color: "#93c5fd",
+                }}
+              >
+                {selectedItem.extra}
+              </p>
             )}
+
             <Button
               variant="outline-light"
               size="sm"

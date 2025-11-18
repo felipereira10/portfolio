@@ -77,7 +77,7 @@ function Home2() {
                   <strong className="blue">Software Developer</strong>
                 </Card.Title>
                 <Card.Subtitle className="subtitle">
-                  Freelancer | mar 2023 - dec 2024
+                  Freelancer | mar 2024 - dec 2024
                 </Card.Subtitle>
                 <Card.Text>
                   Developed and maintained full-stack applications using{" "}

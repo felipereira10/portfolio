@@ -3,7 +3,7 @@ import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
 import { AiOutlineDownload } from "react-icons/ai";
-import Folder from './Folder';
+import Folder from "./Folder";
 // import { Document, Page, pdfjs } from "react-pdf";
 
 // O PDF.js worker não é necessário para o <iframe>, mas se você precisar
@@ -131,13 +131,12 @@ function ResumeNew() {
                 O seu navegador não suporta a visualização de PDF integrada.
               </p>
             </iframe>
-
-            <div style={{ height: "600px", position: "relative" }}>
-              <Folder size={2} color="#5227FF" className="custom-folder" />
-            </div>
           </div>
         </Row>
       </Container>
+      <div style={{ height: "600px", position: "relative" }}>
+        <Folder size={2} color="#5227FF" className="custom-folder" />
+      </div>
     </div>
   );
 }
