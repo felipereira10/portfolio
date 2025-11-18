@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 17, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/page.module.css [app-rsc] (css module)"],"sourcesContent":["__turbopack_context__.v({\n  \"title\": \"page-module__E0kJGG__title\",\n});\n"],"names":[],"mappings":"AAAA;AACA;AACA"}},
+    {"offset": {"line": 24, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Felipe%20Pereira/Documents/GitHub/portfolio/app/page.tsx"],"sourcesContent":["import Header from '../components/Header'\r\nimport Footer from '../components/Footer'\r\nimport styles from './page.module.css'\r\n\r\nexport default function Home() {\r\n  return (\r\n    <>\r\n      <main className=\"p-8 max-w-4xl mx-auto\">\r\n        <h2 className={styles.title}>Oi, eu sou o Felipe Pereira!</h2>\r\n        <p>\r\n          Sou um Desenvolvedor Full-Stack com mais de 2 ano de experiência construindo aplicações web modernas usando React, React Native e Node.js. Tenho experiência prática com bancos de dados como MongoDB e MySQL, e sou certificado em Google Cloud. Também trabalho com serviços da AWS e uso ativamente Python e TypeScript para desenvolver soluções escaláveis e de alta performance em toda a stack. Entre em contato se quiser saber mais!\r\n        </p>\r\n      </main>\r\n    </>\r\n  )\r\n}\r\n"],"names":[],"mappings":";;;;;AAEA;;;AAEe,SAAS;IACtB,qBACE;kBACE,cAAA,8OAAC;YAAK,WAAU;;8BACd,8OAAC;oBAAG,WAAW,kIAAM,CAAC,KAAK;8BAAE;;;;;;8BAC7B,8OAAC;8BAAE;;;;;;;;;;;;;AAMX","debugId":null}}]
+}

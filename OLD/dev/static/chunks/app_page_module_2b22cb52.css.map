@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Felipe%20Pereira/Documents/GitHub/portfolio/app/page.module.css"],"sourcesContent":[".title {\r\n  color: #38bdf8;\r\n  font-size: 2rem;\r\n  text-align: center;\r\n}"],"names":[],"mappings":"AAAA","debugId":null}}]
+}
