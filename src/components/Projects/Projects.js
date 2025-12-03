@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import crud from "../../Assets/Projects/CRUDProject.png";
 import fspay from "../../Assets/Projects/FSPayProject.png";
-import gsw from "../../Assets/Projects/GSWProject.png";
+import gsw from "../../Assets/Projects/GSWProject2.png";
 import jjm from "../../Assets/Projects/JJMProject.png";
 import gastronomy from "../../Assets/Projects/MyGastronomyProject.png";
 import pro4tech from "../../Assets/Projects/Pro4TechProject.png";
